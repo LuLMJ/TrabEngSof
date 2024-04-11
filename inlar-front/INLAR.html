@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Doações</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="stylle.css">
+    </head>
+    <body>
+        <div class="container1">
+            <h1>Registrar Doações</h1>
+            <form>
+                <button id="POST">Registrar doação</button>
+                <button id="btnGetAll">Buscar doações</button>
+                <div class="form-group">
+                    <label for="nome_doacao">Tipo de doação</label>
+                    <select id="nome_doacao" name="nome_doacao">
+                        <option value="" disabled selected>Selecione uma das opções</option>
+                        <option value="dnhr">dinheiro</option>
+                        <option value="almnt">alimentos</option>
+                        <option value="cstbsc">cesta básica</option>
+                        <option value="rps">roupas</option>
+                        <option value="outros">outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ativo">Disponibilidade</label>
+                    <select id="ativo" name="ativo">
+                        <option value="" disabled selected>Selecione uma das opções</option>
+                        <option value="atv">Disponivel</option>
+                        <option value="dstv">Indisponivel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="local_">Descrição</label>
+                    <input type="text" id="local_" name="local_">
+                </div>
+                <div class="form-group">
+                    <label for="quantidade_valor_doacao">Quantidade/Valor unitário</label>
+                    <input type="number" id="quantidade_valor_doacao" name="quantidade_valor_doacao">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h2>Lista de doações</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Tipo</th>
+                  <th>Disponibilidade</th>
+                  <th>Descrição</th>
+                  <th>Valor Un./Quantidade</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody id="donationlist"></tbody>
+            </table>
+          </div>
+          <script scr="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+          <script src="service/INLAR.js"></script>
+    </body>
+</html>
